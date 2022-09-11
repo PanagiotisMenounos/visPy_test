@@ -1,17 +1,7 @@
-import cv2
-import sys
-import serial.tools.list_ports
-import time
-import os
-import easygui
-import socket
 import numpy as np
 from PyQt5 import QtGui
 from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QInputDialog, QLineEdit
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
-from matplotlib import pyplot
 from vispy.color import ColorArray
 
 import sys
