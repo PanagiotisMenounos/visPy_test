@@ -1,8 +1,6 @@
 from vispy import visuals, scene
 from vispy.color import ColorArray
 from PyQt5.QtWidgets import*
-import numpy as np
-
 
 class Designer_plot(QWidget):
     def __init__(self, parent = None):
@@ -15,5 +13,6 @@ class Designer_plot(QWidget):
         self.view.camera = 'turntable'
         self.view.camera.fov = 25
         self.view.camera.distance = 60
+
         # plot
-        self.Plot3D = scene.visuals.create_visual_node(visuals.LinePlotVisual)
+        self.Plot3D = scene.visuals.LinePlot
