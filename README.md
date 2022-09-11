@@ -12,3 +12,8 @@ Initial data is loaded succesfully in startup
 # Fail to update  
 When Update push button is presseed, self.designer_plot.Plot3D.set_data(self.pos) in main.py fails to set the new data  
 <img align="center" src="https://github.com/PanagiotisMenounos/visPy_test/blob/main/img/fail.PNG" />
+
+# Duplicates
+self.designer_plot.Plot3D(self.pos, width=8.0, color=ColorArray('#3792cb'), marker_size=0, edge_color='r', symbol="disc", face_color=(0.2, 0.2, 1, 0.8), parent=self.designer_plot.view.scene)  
+If not using the .set_data then new data appends to the plot without clear the first one  
+<img align="center" src="https://github.com/PanagiotisMenounos/visPy_test/blob/main/img/duplicate.PNG" />

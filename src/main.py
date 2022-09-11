@@ -28,6 +28,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.zz = np.array([2, 8, 3, 9])
         self.pos = np.c_[self.xx, self.yy, self.zz]
         self.designer_plot.Plot3D.set_data(self.pos)
+        #self.designer_plot.Plot3D(self.pos, width=8.0, color=ColorArray('#3792cb'), marker_size=0, edge_color='r', symbol="disc", face_color=(0.2, 0.2, 1, 0.8), parent=self.designer_plot.view.scene)
 
 if __name__ == "__main__":
     QtWidgets.QApplication.setAttribute(Qt.AA_EnableHighDpiScaling) 
