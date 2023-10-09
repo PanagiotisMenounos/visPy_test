@@ -4,7 +4,6 @@ from PyQt5.QtCore import Qt
 from vispy.color import ColorArray
 import fullcontrol as fc
 from random import random
-from math import tau
 
 import sys
 
@@ -33,7 +32,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def update(self):
         steps = [fc.Point(x=50 * random(), y=50 * random(), z=i * 0.01) for i in range(1000)]
-        fc.transform(steps, 'plot')
+
         gcode_text = fc.transform(steps, 'gcode')
         write_gcode_to_file(gcode_text, 'output.gcode')
 
@@ -49,6 +48,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         print("X Coordinates:", x_coords)
         print("Y Coordinates:", y_coords)
         print("Z Coordinates:", z_coords)
+        print(fc.transform(steps, 'plot'))
 
 if __name__ == "__main__":
     QtWidgets.QApplication.setAttribute(Qt.AA_EnableHighDpiScaling) 
